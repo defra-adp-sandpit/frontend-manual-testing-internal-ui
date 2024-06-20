@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "frontend-manual-testing-internal-ui.deployment") -}}
+{{- define "frontend-manual-testing-internal-ui.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "frontend-manual-testing-internal-ui.container") }}
+{{- end -}}
